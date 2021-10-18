@@ -4,18 +4,23 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Primeiro from './Components/Primeiro';
 import Segundo from './Components/Segundo';
-import {comp1, comp2} from './Components/Comp'
+import {comp1, comp2} from './Components/Comp';
+import FlexBoxV1 from './layout/FlexBoxV1';
+import Terceiro from './Components/Terceiro';
+import Quarto from './Components/Quarto';
+import Quinto from './Components/Quinto';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!!</Text>
+    <SafeAreaView>
+      <FlexBoxV1/>
       <Primeiro/>
       <Segundo/>
-      <comp1/>
-      <comp2/>
+      <Terceiro/>
+      <Quarto/>
+      <Quinto/>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
