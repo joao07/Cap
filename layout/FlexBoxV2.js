@@ -17,7 +17,7 @@ export default props => {
 
 const styleTest = StyleSheet.create({
     FlexV2:{
-        flex: 1,
+        width: '100%',
         backgroundColor: '#000',
         alignItems:'center'
     }
