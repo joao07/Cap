@@ -6,17 +6,14 @@ import Quadrado from "./Quadrado";
 export default props => {
     return (
         <View style = {styleTest.FlexV1}>
-            <Quadrado cor='#fff'/>
-            <Quadrado cor='#fcba03'/>
-            <Quadrado cor='#0048ff'/>
-            <Quadrado cor='#263866'/>
-            <Quadrado cor='#5b1061'/>
+            <Quadrado lado = {100}/>            
         </View>
     )
 }
 
 const styleTest = StyleSheet.create({
     FlexV1:{
-
+        marginTop: '20%',
+        alignItems:'center'
     }
 })
