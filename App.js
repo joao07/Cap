@@ -4,7 +4,15 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 import TelaLogin from './Telas/Login';
 
-<TelaLogin/>
+
+export default function App() {
+  return (
+      <View>
+        <TelaLogin/>
+      </View>
+  );
+}
+
 
 const styles = StyleSheet.create({
   container: {
