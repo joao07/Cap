@@ -1,29 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, TextInput, View, SafeAreaView } from 'react-native';
 
-import Primeiro from './Components/Primeiro';
-import Segundo from './Components/Segundo';
-import FlexBoxV1 from './layout/FlexBoxV1';
-import Terceiro from './Components/Terceiro';
-import Quarto from './Components/Quarto';
-import Quinto from './Components/Quinto';
+
+import FlexBoxV1 from '../layout/FlexBoxV1';
+import Terceiro from '../Components/Terceiro';
+import Quarto from '../Components/Quarto';
+import Quinto from '../Components/Quinto';
+import EmailInput from '../Components/Primeiro';
+import SenhaInput from '../Components/Segundo';
+
 
 export default function TelaLogin() {
+  let numero = 0
+  const inc = () => numero + 1
+
   return (
-    <SafeAreaView>
+    <SafeAreaView style ={styles.AumentoTela} >
       <FlexBoxV1/>
-      <View style = {styles.EstiloText}>
-        <Primeiro/>
+      <View>
+        <EmailInput/>
       </View>
-      <View style = {styles.EstiloText}>
-        <Segundo/>
+      <View>
+        <SenhaInput/>
       </View>
       <View style = {styles.EstiloLogin}>
         <Terceiro/>
       </View>
-      <View style = {styles.EstiloCaixa}>
-        <Quarto/>
+      <View>
+        <TouchableOpacity style={styles.button}  onPress={inc}>
+          <Text style = {styles.TextLogin}>Login</Text>
+        </TouchableOpacity>
       </View>
       <View>
         <Quinto/>
@@ -64,5 +71,23 @@ EstiloText:{
     height:'10%',
     justifyContent:'center'
 },
+
+button: {
+  alignItems: 'center',
+  backgroundColor: '#ad0000',
+  padding: 10,
+  width: '70%',
+  marginTop: 20,
+  marginLeft: 50,
+},
+
+AumentoTela:{
+  height: '100%',
+  backgroundColor: "#2a2a2b"
+},
+
+TextLogin:{
+  color:'whitesmoke'
+}
 
 });
