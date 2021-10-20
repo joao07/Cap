@@ -1,12 +1,13 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet } from "react-native";
 import TxtG from "../Styles/TxtG";
 import Quadrado from "./Quadrado";
 
 export default props => {
     return (
         <View style = {styleTest.FlexV1}>
-            <Quadrado lado = {100}/>            
+            <Image source = {require('../assets/Ativo3.png')} 
+            style = {styleTest.Imagem} />            
         </View>
     )
 }
@@ -15,5 +16,11 @@ const styleTest = StyleSheet.create({
     FlexV1:{
         marginTop: '20%',
         alignItems:'center'
+    },
+
+    Imagem:{
+        height: 200,
+        width: 200
     }
+    
 })
