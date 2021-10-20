@@ -1,10 +1,19 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, TextInput } from "react-native";
 
-export default function Senha() {
-   return<Text style = {StyleSenha.Estilo}>Senha</Text>
-   
-}
+export default function SenhaInput () {
+    const [text, onChangeText] = React.useState(null);
+  
+    return (
+        <TextInput
+        style={StyleSenha.input}
+          onChangeText={onChangeText}
+          value={text}
+          keyboardType='visible-password'
+          placeholder="Senha"
+        />
+    );
+  };
 
 const StyleSenha = StyleSheet.create({
     Estilo:{
@@ -13,5 +22,15 @@ const StyleSenha = StyleSheet.create({
         alignItems:'center',
         color:'#636963',        
         fontSize: 20,
-    }
+    },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        backgroundColor: 'whitesmoke',
+        marginTop: 10,
+        justifyContent:'center',        
+        borderRadius: 20
+      },
 });
