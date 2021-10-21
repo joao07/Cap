@@ -9,8 +9,8 @@ export default function SenhaInput () {
         style={StyleSenha.input}
           onChangeText={onChangeText}
           value={text}
-          keyboardType='visible-password'
           placeholder="Senha"
+          secureTextEntry={true}
         />
     );
   };
