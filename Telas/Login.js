@@ -79,6 +79,7 @@ button: {
   width: '70%',
   marginTop: 20,
   marginLeft: 50,
+  borderRadius: 20
 },
 
 AumentoTela:{
@@ -87,7 +88,7 @@ AumentoTela:{
 },
 
 TextLogin:{
-  color:'whitesmoke'
+  color:'whitesmoke',
 }
 
 });
