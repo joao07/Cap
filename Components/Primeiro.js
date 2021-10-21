@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, TextInput } from "react-native";
+import { Text, View, Image, StyleSheet, TextInput } from "react-native";
 
 export default function EmailInput () {
     const [text, onChangeText] = React.useState(null);
@@ -10,8 +10,10 @@ export default function EmailInput () {
           onChangeText={onChangeText}
           value={text}
           keyboardType='email-address'
-          placeholder="Email"
-        />
+          placeholder="Email">
+          
+        </TextInput>
+
     );
   };
 
@@ -36,5 +38,16 @@ const StyleEmail = StyleSheet.create({
         justifyContent:'center',
         borderRadius: 20
       },
+
+      Espaco:{
+        width:5
+    },
+
+    Imagem:{
+        height: 200,
+        width: 200
+    }
+
+
 });
 
